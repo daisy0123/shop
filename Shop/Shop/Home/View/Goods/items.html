@@ -1,0 +1,75 @@
+<div class="container-fluid">
+    <include file="Public/search"/>
+    <include file="Public/navigation"/>
+    <div class="col-md-10 col-md-offset-1 items-container">
+        <div class="media items-intro">
+            <a class="media-left media-middle items-pic" href="{:U('Goods/items/goodsid/'.$items['goodsid'])}">
+                <img src="{$items['goodsimg00']}" alt="...">
+            </a>
+            <div class="media-body items-text">
+                <p class="items_Small"></p>
+                <form method="post" action="{:U('User/doBuy')}">                   
+                    <b class="items_name">{$items['goodsname']}<p class="items_Small">{$items['goodsintro']}</p></b>
+                    <p class="items_price">售价：<span class="items_price_margin"><b class="items_big">￥{$items['goodsprice']}</b></span></p>
+                    <p class="items_send">运费：<b class="items_send_num">￥{$items['goodssend']}</b></p>
+                    <p class="items_count">数量：
+                        <span class="items_count_content">
+                            <span class="btn_num" id="num_more">+</span>
+                            <input type="text" class="count_num" value="1" disabled=""/>
+                            <span class="btn_num" id="num_less">-</span>
+                        </span>
+                    </p>
+                    <p class="items_store">店铺：<a href="#">{$items['salername']}</a></p>
+                    <p>
+                        <input type='text' name='goodsid' hidden="true" value="{$items['goodsid']}">
+                        <input type='text' class="hgoodscount" name='goodscount' hidden="true" value="1">
+                        <input type='text' class="hgoodsprice" name='goodsprice' hidden="true" value="{$items['goodsprice']}">
+                        <input type='text' class="hgoodstotal" name='goodstotal' hidden="true" value="{$items['goodsprice']}">
+                        <span class="items_oper"><a href="{:U('User/doLove/itemsid/'.$items['goodsid'])}">收藏</a></span>
+                        <input type="submit" class="buybtn" name="buySubmit" value="加入购物车">
+                        <input type="submit" class="buybtn" name="buySubmit" value="立即购买">
+                    </p>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-12 items-section">
+            <div class="row items-section-title">
+                <span class="items-section-picture items-section-active" id="items-section-picture">商品详情</span>
+                <span class="items-section-comment" id="items-section-comment">用户评价</span>
+            </div> 
+            <div class="items-section-show">
+                <div class="row items-section-picture-page">
+                    <div class="items-section-pic">
+                        <img src="{$items['goodsimg01']}" />
+                        <img src="{$items['goodsimg02']}" />
+                        <img src="{$items['goodsimg03']}" />
+                        <img src="{$items['goodsimg04']}" />
+                    </div>
+                </div>
+                <div class="row items-section-comment-page">
+                    <div class="items-comments">
+                        <volist name="comment" id="com">
+                            <blockquote>
+                                <p>{$com['content']}</p>
+                                <footer>来自<cite title="Source Title">{$com['username']}</cite></footer>
+                            </blockquote>     
+                        </volist>
+                    </div>
+                    <div class="row pager">
+                        <nav>
+                            <ul class="pagination">
+                                <li class="disabled"><a href="#">&laquo;</a></li>
+                                <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">&raquo;</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

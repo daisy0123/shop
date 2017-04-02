@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <div class="col-md-10 col-md-offset-1 register-title">
+        <h4>订单详情</h4>
+    </div>
+    <div class="col-md-10 col-md-offset-1">
+        <div class="media items-intro list-intro">
+            <a class="media-left media-middle comment-pic" href="{:U('Goods/items/goodsid/'.$items['goodsid'])}">
+                <img src="{$items['goodsimg00']}" alt="...">
+            </a>
+            <div class="media-body items-text list-content">           
+                <b class="items_name">{$items['goodsname']}</b>
+                <p class="items_price">价格：<b class="items_send_num">￥{$items['goodsprice']}</b></p>
+                <p class="items_price">规格：<b class="items_send_num">{$items['goodssize']}</b></p>
+                <span class="items_send">运费：<b class="items_send_num">￥{$items['goodssend']}</b></span>
+                <span class="items_count">数量： <b class="items_send_num">{$items['goodscount']}</b></span>
+                <span class="items_count">总额： <b class="items_send_num">{$items['goodstotal']}</b></span>
+                <span class="items_store">店铺：<a href="#">{$items['salername']}</a></span>          
+                <div class="list-text">
+                    <b class="list-name">订单详情信息</b>
+                    <p class="items_price">用户：<b class="items_send_num">{$items['username']}</b></p>
+                    <span class="items_send">收货人：<b class="items_send_num">{$items['addressname']}</b></span>
+                    <span class="items_count">收货人地址： <b class="items_send_num">{$items['addressadd']}</b></span>
+                    <span class="items_count">收货人联系方式： <b class="items_send_num">{$items['addressphone']}</b></span>
+                    <span class="items_count">收货人邮政编码： <b class="items_send_num">{$items['addressnum']}</b></span>    
+                </div>
+            </div> 
+        </div>
+
+    </div>
+</div>

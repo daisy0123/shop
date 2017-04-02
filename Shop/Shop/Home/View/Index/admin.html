@@ -1,0 +1,162 @@
+<div class="admin-select row">
+    <h3 class='text-center'>管理员管理</h3>
+    <div class="col-md-6 col-md-offset-3">                        
+        <div class="col-md-2"><button type="button" class="btn btn-default" id="first-part">买家管理</button></div>
+        <div class="col-md-2"><button type="button" class="btn btn-default second-part" id="second-part">商家管理</button></div>
+        <div class="col-md-2"><button type="button" class="btn btn-default third-part" id="third-part">商品管理</button></div>
+        <div class="col-md-2"><button type="button" class="btn btn-default forth-part" id="forth-part">交易管理</button></div>
+        <div class="col-md-2"> <button type="button" class="btn btn-default fifth-part" id="fifth-part">管理员管理</button></div>
+          <div class="col-md-2"> <a href="{:U('Index/adminAdd')}"><button type="button" class="btn btn-default fifth-part">添加管理</button></a></div>
+    </div>
+</div>
+<div class="row part-page">
+    <div class="first-part-page">
+        <table class="table-bordered table-condensed col-md-12">
+            <tr>
+                <th>买家号</th>
+                <th>买家昵称</th>
+                <th>买家电话号码</th>   
+                <th>买家邮箱</th>   
+                <th>买家性别</th>   
+                <th>买家地址</th>  
+                <th>买家头像</th>  
+                <th>操作</th>  
+            </tr>
+            <volist name="user" id="u">
+                <tr>
+                    <td>{$u['userid']}</td>
+                    <td>{$u['username']}</td>
+                    <td>{$u['phonenum']}</td>
+                    <td>{$u['email']}</td> 
+                    <td>{$u['sex']}</td>
+                    <td>{$u['address']}</td>
+                    <td><img src="{$u['userimg']}"></td> 
+                    <td>
+                        <a href="{:U('Index/adminUpdate/userid/'.$u['userid'])}">修改</a>&emsp;
+                        <a href="{:U('Index/adminDelect/userid/'.$u['userid'])}">删除</a>
+                    </td>
+                </tr>
+            </volist>
+        </table>
+    </div>
+    <div class="second-part-page">
+        <table class="table-bordered table-condensed col-md-12">
+            <tr>
+                <th>商家号</th>
+                <th>商家昵称</th>
+                <th>商家电话号码</th>   
+                <th>商家邮箱</th>   
+                <th>商家性别</th>   
+                <th>商家地址</th>  
+                <th>商家头像</th>  
+                <th>操作</th>  
+            </tr>
+            <volist name="saler" id="s">
+                <tr>
+                    <td>{$s['salerid']}</td>
+                    <td>{$s['salername']}</td>
+                    <td>{$s['salerphone']}</td>
+                    <td>{$s['saleremail']}</td> 
+                    <td>{$s['salersex']}</td>
+                    <td>{$s['saleraddress']}</td>
+                    <td><img src="{$s['salerimg']}"></td> 
+                    <td>
+                        <a href="{:U('Index/adminUpdate/salerid/'.$s['salerid'])}">修改</a>&emsp;
+                        <a href="{:U('Index/adminDelect/salerid/'.$s['salerid'])}">删除</a>
+                    </td>
+                </tr>
+            </volist>
+        </table>
+    </div>
+    <div class="third-part-page">
+        <table class="table-bordered table-condensed col-md-12">
+            <tr>
+                <th>商品号</th>
+                <th>商品名称</th>
+                <th>商品信息</th>   
+                <th>商品规格</th> 
+                <th>商品价格</th>   
+                <th>商品数量</th>   
+                <th>商品运费</th>  
+                <th>商品类型</th> 
+                <th>商品图片</th>  
+                <th>商家昵称</th> 
+                <th>操作</th>  
+            </tr>
+            <volist name="goods" id="g">
+                <tr>
+                    <td>{$g['goodsid']}</td>
+                    <td>{$g['goodsname']}</td>
+                    <td>{$g['goodsintro']}</td>
+                    <td>{$g['goodssize']}</td> 
+                    <td>{$g['goodsprice']}</td>
+                    <td>{$g['goodscount']}</td>
+                    <td>{$g['goodssend']}</td> 
+                    <td>{$g['goodstype']}</td>
+                    <td><img src="{$g['buycartimg']}"></td> 
+                    <td>{$g['salername']}</td>
+                    <td>
+                        <a href="{:U('Index/adminUpdate/goodsid/'.$g['goodsid'])}">修改</a>&emsp;
+                        <a href="{:U('Index/adminDelect/goodsid/'.$g['goodsid'])}">删除</a>
+                    </td>
+                </tr>
+            </volist>
+        </table>
+    </div>
+    <div class="forth-part-page">
+        <table class="table-bordered table-condensed col-md-12">
+            <tr>
+                <th>交易号</th>
+                <th>商品名称</th>
+                <th>商品信息</th>   
+                <th>商品规格</th> 
+                <th>商品价格</th>   
+                <th>商品数量</th>   
+                <th>商品运费</th>  
+                <th>商品总额</th>
+                <th>商品类型</th> 
+                <th>商品图片</th>  
+                <th>商家昵称</th> 
+                <th>买家昵称</th>
+              
+            </tr>
+            <volist name="shop" id="h">
+                <tr>
+                    <td>{$h['shoplistid']}</td>
+                    <td>{$h['goodsname']}</td>
+                    <td>{$h['goodsintro']}</td>
+                    <td>{$h['goodssize']}</td> 
+                    <td>{$h['goodsprice']}</td>
+                    <td>{$h['goodscount']}</td>
+                    <td>{$h['goodssend']}</td> 
+                    <td>{$h['goodstotal']}</td> 
+                    <td>{$h['goodstype']}</td>
+                    <td><img src="{$h['buycartimg']}"></td> 
+                    <td>{$h['salername']}</td>
+                    <td>{$h['username']}</td>
+                    
+                </tr>
+            </volist>
+        </table>
+    </div>
+    <div class="fifth-part-page">
+        <table class="table-bordered table-condensed col-md-12">
+            <tr>
+                <th>管理员号</th>
+                <th>管理员昵称</th>
+                <th>管理员密码</th>   
+                <th>操作</th>  
+            </tr>
+            <volist name="admin" id="a">
+                <tr>
+                    <td>{$a['adminid']}</td>
+                    <td>{$a['adminname']}</td>
+                    <td>{$a['adminpassword']}</td>
+                    <td>
+                        唯一管理员
+                    </td>
+                </tr>
+            </volist>
+        </table>
+    </div>
+</div>

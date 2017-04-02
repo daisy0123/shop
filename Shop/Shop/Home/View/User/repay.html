@@ -1,0 +1,41 @@
+<div class="container-fluid buycart-container">
+    <div class="col-md-10 col-md-offset-1 goods-contain">
+        <div class="row buycart-progress">
+            <p class="text-right progress-sinal">
+                <i class="fa fa-circle-o fa-2x sinal-active" aria-hidden="true"></i> 
+                <img src="__PUBLIC__/img/buycart/line-active.png">
+                <i class="fa fa-circle-o fa-2x sinal-active" aria-hidden="true"></i>
+                <img src="__PUBLIC__/img/buycart/line-active.png">
+                <i class="fa fa-circle-o fa-2x sinal-active" aria-hidden="true"></i>
+            </p>
+            <p class="text-right progress-sinal-text">
+                <span class="sinal-active">我的购物车</span> 
+                <span class="sinal-active">提交订单</span> 
+                <span class="sinal-active">选择支付方式</span>          
+            </p>
+        </div>
+        <div class="col-md-12 repay-contain">
+            <div class="col-md-10 col-md-offset-1 repay-success-sinal"> 
+                <div class="col-md-3 repay-success-pic">
+                    <img src="__PUBLIC__/img/repay/check.png">  
+                </div>
+                <div class="col-md-9 repay-text">
+                    <p class="repay-text-big"><strong>订单提交成功，现在只差最后一步啦！</strong></p>
+                    <p>请选择付款方式，支付成功仓库将尽快为您发货</p>
+                </div>                         
+            </div>
+            <div class="col-md-10 col-md-offset-1 repay-message">
+                <form method="post" action="{:U('User/doSuccess')}">
+                    <div class="row">
+                        <p class="repay-text-big">支付金额：<b>￥{$money}</b></p>
+                    </div>
+                    <div class="repay-final">
+                        <input type="text" name="useraddress" value="{$useraddid}"  hidden>
+                        <input type="text" hidden="true" name="repayMoney" value="{$money}"/>
+                        <input type="submit" class="btn btn-default"  name="repaySub" value="完成支付">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

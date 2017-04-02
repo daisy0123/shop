@@ -1,0 +1,42 @@
+<div class="container-fluid">
+    <include file="Public/search"/>
+    <include file="Public/navigation"/>
+    <div class="container goods-title">
+        <p>{$goodstype}系列商品</p>
+    </div>
+    <div class="container goods-list">
+        <div class="container">      
+            <volist name="goodslist" id="data">
+                <div class="col-sm-4 col-md-3">
+                    <a href="{:U('Goods/items/goodsid/'.$data['goodsid'])}">
+                        <div class="thumbnail">
+                            <img src="{$data['goodsimg00']}" alt="">
+                            <div class="caption goods_intro">
+                                <a href="{:U('Goods/items/goodsid/'.$data['goodsid'])}" class="goods_name">{$data['goodsname']}</a>
+                                <p class="goods_account">价格：<b class="goods_price">￥{$data['goodsprice']}</b></p>
+                                <p class="goods_send">运费：<b class="goods_send_number">￥{$data['goodssend']}</b></p>
+                                <p class="goods_saler">店铺：
+                                    <a href="#">{$data['salername']}</a>
+                                </p>
+                                <p class="text-right"><a href="{:U('Goods/items/goodsid/'.$data['goodsid'])}" class="btn btn-primary goods_buy" role="button">立即购买</a></p>
+                            </div>
+                        </div>
+                    </a>               
+                </div>
+            </volist>
+        </div>
+        <div class="row pager">
+            <nav>
+                <ul class="pagination">
+                    <li class="disabled"><a href="#">&laquo;</a></li>
+                    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">&raquo;</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>

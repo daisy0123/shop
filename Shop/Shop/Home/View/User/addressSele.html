@@ -1,0 +1,74 @@
+<div class="container-fluid buycart-container">
+    <div class="col-md-10 col-md-offset-1 goods-contain">
+        <div class="row buycart-progress">
+            <p class="text-right progress-sinal">
+                <i class="fa fa-circle-o fa-2x sinal-active" aria-hidden="true"></i> 
+                <img src="__PUBLIC__/img/buycart/line-active.png">
+                <i class="fa fa-circle-o fa-2x sinal-active" aria-hidden="true"></i>
+                <img src="__PUBLIC__/img/buycart/line.png">
+                <i class="fa fa-circle-o fa-2x" aria-hidden="true"></i>
+            </p>
+            <p class="text-right progress-sinal-text">
+                <span class="sinal-active">我的购物车</span> 
+                <span class="sinal-active">提交订单</span> 
+                <span>选择支付方式</span>          
+            </p>
+        </div>
+        <div class="col-md-10 col-md-offset-1 shopList-content">
+            <div class="col-md-12">
+                <p>选择收货地址</p>
+            </div>  
+            <div class="col-md-12 shopList-table">   
+                <form method="post" action="{:U('User/addSelect')}">
+                    <table class="row table">
+                        <tr>
+                            <th>
+                                选择
+                            </th>
+                            <th>
+                                收货人姓名
+                            </th>
+                            <th>
+                                收货人详细地址
+                            </th>
+                            <th>
+                                收货人号码
+                            </th>
+                            <th>
+                                收货人邮政编码
+                            </th>
+                        </tr>
+                        <volist name="addressSele" id="add">
+                            <tr>
+                                <td>
+                                    <input type='checkbox' name='addressid' class='addresscheck' value=" {$add['useraddid']}"/>
+                                </td>
+                                <td>
+                                    {$add['addressname']}
+                                </td>
+                                <td>
+                                    {$add['addressphone']}
+                                </td>
+                                <td>
+                                    {$add['addressadd']}
+                                </td>
+                                <td>
+                                    {$add['addressnum']}
+                                </td>
+                            </tr>
+                        </volist>
+                    </table>
+                    <div class="col-md-12 addressSele-footer">
+                        <div class="row empty-area"></div>
+                        <div class="money-list">                       
+                            <p class="text-right">
+                                <input type="submit" class="btn btn-default" name="addressSub" value="确认">
+                            </p>
+                        </div>                  
+                    </div>
+                </form>
+            </div>
+        </div>            
+
+    </div>
+</div>

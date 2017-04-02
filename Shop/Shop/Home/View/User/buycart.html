@@ -1,0 +1,81 @@
+<div class="container-fluid buycart-container">
+    <div class="col-md-10 col-md-offset-1 goods-contain">
+        <div class="row buycart-progress">
+            <p class="text-right progress-sinal">
+                <i class="fa fa-circle-o fa-2x sinal-active" aria-hidden="true"></i> 
+                <img src="__PUBLIC__/img/buycart/line.png">
+                <i class="fa fa-circle-o fa-2x" aria-hidden="true"></i>
+                <img src="__PUBLIC__/img/buycart/line.png">
+                <i class="fa fa-circle-o fa-2x" aria-hidden="true"></i>
+            </p>
+            <p class="text-right progress-sinal-text">
+                <span class="sinal-active">我的购物车</span> 
+                <span>提交订单</span> 
+                <span>选择支付方式</span>          
+            </p>
+        </div>
+        <div class="col-md-12 buycart-goods-contain">
+            <table class="table buycart-table">
+                <tr>
+                    <th>
+                        商品信息
+                    </th>
+                    <th >
+                        单价(元)
+                    </th>
+                    <th>
+                        数量
+                    </th>
+                    <th>
+                        金额
+                    </th>
+                    <th>
+                        操作
+                    </th>
+                </tr>
+                <form method="post" action="{:U('User/doBuycartList')}">
+                    <volist name="buycart" id="buy">
+                        <tr>
+                            <td>
+                                <input type='checkbox' name="goodsselect[]" class='check' value="{$buy['buycartid']}"/>
+                                <img src="{$buy['buycartimg']}">
+                                <a href="{:U('Goods/items/goodsid/'.$buy['goodsid'])}" class="text-right">{$buy['goodsname']}</a>
+                            </td>
+                            <td><b>￥{$buy['goodsprice']}</b></td>
+                            <td>
+                                <input type='text' class='goodstotal' value="{$buy['goodscount']}" disabled='true' />
+                            </td>
+                            <td class="tmoney"><b>{$buy['goodstotal']}</b></td>
+                            <td>
+                                <a href="{:U('User/buycartDelete/buycartid/'.$buy['buycartid'])}">删除</a>&emsp;
+                                <a href="{:U('User/doLove/itemsid/'.$buy['goodsid'])}">添加收藏</a>
+                            </td>
+                        </tr>
+                    </volist>
+            </table>
+            <div class="col-md-12 buycart-footer">
+                <div class="col-md-8">
+                    <input type='checkbox'  class='allcheck' />
+                    <span>全选</span>
+                </div>            
+                <div class="col-md-4 buycart-footer-text">
+                    
+                    <span>
+                        总价（不含运费）：
+                        <input class="mtotal" type="text" value="" disabled='true' name="buycartmoney">
+                        <input type="submit" class="btn btn-default"  name="msubmit" value="结算">
+                    </span>
+                </div>
+            </div>                                
+            </form>
+        </div>
+        <div class="col-md-12 buycart-goods-none">
+            <div class="goods-none-show col-md-offset-3 col-md-9">
+                <img src="__PUBLIC__/img/buycart/shopping cart.png"> 购物车空空如也，赶紧去
+                <a href="index.html">
+                    逛逛吧>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,96 @@
+[ 2016-12-12T17:18:52+08:00 ] ::1 /thinkPhpPro/Shop/index.php/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000828s ]
+ERR: 无法加载模块:Admin
+
+[ 2016-12-12T17:19:02+08:00 ] ::1 /thinkPhpPro/Shop/index.php/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000795s ]
+ERR: 无法加载模块:Admin
+
+[ 2016-12-12T17:19:02+08:00 ] ::1 /thinkPhpPro/Shop/index.php/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000857s ]
+ERR: 无法加载模块:Admin
+
+[ 2016-12-12T17:19:03+08:00 ] ::1 /thinkPhpPro/Shop/index.php/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001177s ]
+ERR: 无法加载模块:Admin
+
+[ 2016-12-12T17:19:34+08:00 ] ::1 /thinkPhpPro/Shop/index.php/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000870s ]
+ERR: 无法加载模块:Admin
+
+[ 2016-12-12T17:19:35+08:00 ] ::1 /thinkPhpPro/Shop/index.php/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000772s ]
+ERR: 无法加载模块:Admin
+
+[ 2016-12-12T17:19:53+08:00 ] ::1 /thinkPhpPro/Shop/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005239s ]
+ERR: 无法加载模块:Admin
+
+[ 2016-12-12T17:20:55+08:00 ] ::1 /thinkPhpPro/Shop/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000812s ]
+ERR: 无法加载模块:Admin
+
+[ 2016-12-12T17:21:52+08:00 ] ::1 /thinkPhpPro/Shop/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001219s ]
+ERR: 无法加载模块:Admin
+
+[ 2016-12-12T17:21:53+08:00 ] ::1 /thinkPhpPro/Shop/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000810s ]
+ERR: 无法加载模块:Admin
+
+[ 2016-12-12T17:22:10+08:00 ] ::1 /thinkPhpPro/Shop/index.php/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000995s ]
+ERR: 无法加载模块:Admin
+
+[ 2016-12-12T17:23:00+08:00 ] ::1 /thinkPhpPro/Shop/index.php/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001657s ]
+ERR: 无法加载模块:Admin
+
+[ 2016-12-12T17:23:00+08:00 ] ::1 /thinkPhpPro/Shop/index.php/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000836s ]
+ERR: 无法加载模块:Admin
+
+[ 2016-12-12T17:23:00+08:00 ] ::1 /thinkPhpPro/Shop/index.php/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000796s ]
+ERR: 无法加载模块:Admin
+
+[ 2016-12-12T17:23:00+08:00 ] ::1 /thinkPhpPro/Shop/index.php/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000875s ]
+ERR: 无法加载模块:Admin
+
+[ 2016-12-12T17:23:01+08:00 ] ::1 /thinkPhpPro/Shop/index.php/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000807s ]
+ERR: 无法加载模块:Admin
+
